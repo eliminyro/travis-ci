@@ -2,7 +2,7 @@ sudo: required
 services:
   - docker
 
-  before_install:
-    - docker build -t eliminyro/frontend -f Dockerfile.dev .
+before_install:
+  - docker build -t eliminyro/frontend -f Dockerfile.dev .
 script:
   - docker run eliminyro/frontend npm run test -- --coverage
